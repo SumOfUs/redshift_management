@@ -1,0 +1,901 @@
+{
+  "rules": [
+    {
+      "rule-type": "selection",
+      "rule-id": "1",
+      "rule-name": "1",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_user"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "2",
+      "rule-name": "2",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_usermailing"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "3",
+      "rule-name": "3",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_clickurl"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "4",
+      "rule-name": "4",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_userfield"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "5",
+      "rule-name": "5",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_click"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "6",
+      "rule-name": "6",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_open"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "7",
+      "rule-name": "7",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "share_type"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "8",
+      "rule-name": "8",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "share_link"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "9",
+      "rule-name": "9",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "share_action"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "10",
+      "rule-name": "10",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "share_click"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "11",
+      "rule-name": "11",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_transaction"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "12",
+      "rule-name": "12",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_orderrecurring"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "13",
+      "rule-name": "13",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_order"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "14",
+      "rule-name": "14",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing_tag"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "15",
+      "rule-name": "15",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "16",
+      "rule-name": "16",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_tags"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "17",
+      "rule-name": "17",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_page_tags"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "18",
+      "rule-name": "18",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_page"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "19",
+      "rule-name": "19",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_actionfield"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "20",
+      "rule-name": "20",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_action"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "21",
+      "rule-name": "21",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_subscriptionhistory"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "22",
+      "rule-name": "22",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_list"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "23",
+      "rule-name": "23",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_subscription"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "24",
+      "rule-name": "24",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_phone"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "25",
+      "rule-name": "25",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_location"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "26",
+      "rule-name": "26",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_useragent"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "27",
+      "rule-name": "27",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_user",
+        "column-name": "prefix"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "28",
+      "rule-name": "28",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_user",
+        "column-name": "suffix"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "29",
+      "rule-name": "29",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_user",
+        "column-name": "password"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "30",
+      "rule-name": "30",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_user",
+        "column-name": "plus4"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "31",
+      "rule-name": "31",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_action",
+        "column-name": "link"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "32",
+      "rule-name": "32",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_action",
+        "column-name": "opq_id"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "33",
+      "rule-name": "33",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "fromline_id"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "34",
+      "rule-name": "34",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "html"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "35",
+      "rule-name": "35",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "text"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "36",
+      "rule-name": "36",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "emailwrapper_id"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "37",
+      "rule-name": "37",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "web_viewable"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "38",
+      "rule-name": "38",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "target_group_from_landing_page"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "39",
+      "rule-name": "39",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "winning_subject_id"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "40",
+      "rule-name": "40",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "requested_proofs"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "41",
+      "rule-name": "41",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "submitter_id"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "42",
+      "rule-name": "42",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "scheduled_by_id"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "43",
+      "rule-name": "43",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "queue_task_id"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "44",
+      "rule-name": "44",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "queued_at"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "45",
+      "rule-name": "45",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "queued_by_id"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "46",
+      "rule-name": "46",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "finished_at"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "47",
+      "rule-name": "47",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "query_queued_at"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "48",
+      "rule-name": "48",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "query_started_at"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "49",
+      "rule-name": "49",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "query_completed_at"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "50",
+      "rule-name": "50",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "query_previous_runtime"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "51",
+      "rule-name": "51",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "query_status"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "52",
+      "rule-name": "52",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "query_task_id"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "53",
+      "rule-name": "53",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "targeting_version"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "54",
+      "rule-name": "54",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "targeting_version_saved"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "55",
+      "rule-name": "55",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "rate"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "56",
+      "rule-name": "56",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "includes_id"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "57",
+      "rule-name": "57",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "excludes_id"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "58",
+      "rule-name": "58",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "pid"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "59",
+      "rule-name": "59",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "sent_proofs"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "60",
+      "rule-name": "60",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "rebuild_query_at_send"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "61",
+      "rule-name": "61",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "limit_percent"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "62",
+      "rule-name": "62",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "mergefile_id"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "63",
+      "rule-name": "63",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "target_mergefile"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "64",
+      "rule-name": "64",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "mails_per_second"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "65",
+      "rule-name": "65",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "mergequery_report_id"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "66",
+      "rule-name": "66",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "target_mergequery"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "67",
+      "rule-name": "67",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "version"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "68",
+      "rule-name": "68",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_mailing",
+        "column-name": "limit"
+      },
+      "rule-action": "rename",
+      "value": "mailing_limit"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "69",
+      "rule-name": "69",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_transaction",
+        "column-name": "test_mode"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "70",
+      "rule-name": "70",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_orderrecurring",
+        "column-name": "occurrences"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "71",
+      "rule-name": "71",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_orderrecurring",
+        "column-name": "period"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "72",
+      "rule-name": "72",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_order",
+        "column-name": "user_detail_id"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "73",
+      "rule-name": "73",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_order",
+        "column-name": "shipping_address_id"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "74",
+      "rule-name": "74",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_order",
+        "column-name": "payment_method"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "75",
+      "rule-name": "75",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_page",
+        "column-name": "goal"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "76",
+      "rule-name": "76",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_page",
+        "column-name": "goal_type"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "77",
+      "rule-name": "77",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_page",
+        "column-name": "never_spam_check"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "78",
+      "rule-name": "78",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_list",
+        "column-name": "notes"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "79",
+      "rule-name": "79",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_phone",
+        "column-name": "type"
+      },
+      "rule-action": "remove-column"
+    }
+  ]
+}
