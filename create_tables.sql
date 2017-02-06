@@ -4,7 +4,7 @@ CREATE TABLE ak_sumofus.core_user(
   updated_at datetime NOT NULL,
   email varchar(765) NOT NULL,
   first_name varchar(765) NOT NULL,
-  middle_name varchar(765) NOT NULL,
+  middle_name varchar(765) NOT NULL DEFAULT '',
   last_name varchar(765) NOT NULL,
   subscription_status varchar(765) NOT NULL,
   address1 varchar(765) NOT NULL,
@@ -65,7 +65,7 @@ DISTKEY(id)
 INTERLEAVED SORTKEY(id,created_at, lang_id, type, title);
 
 
-CREATE TABLE ak_sumofus.new_core_userfield(
+CREATE TABLE ak_sumofus.core_userfield(
   id INTEGER NOT NULL,
   parent_id INTEGER NOT NULL,
   name VARCHAR(765) NOT NULL DEFAULT '',
@@ -158,8 +158,8 @@ CREATE TABLE ak_sumofus.core_actionfield(
   id INTEGER NOT NULL,
   parent_id INTEGER NOT NULL,
   name VARCHAR(765) NOT NULL DEFAULT '',
-  value VARCHAR(5000) NOT NULL DEFAULT '',
-  PRIMARY KEY (id),
+  value VARCHAR(10000) NOT NULL DEFAULT '',
+  PRIMARY KEY(id),
   FOREIGN KEY(parent_id) REFERENCES core_action(id)
 )
 DISTKEY(parent_id)
@@ -342,9 +342,9 @@ CREATE TABLE ak_sumofus.core_transaction (
  success SMALLINT NOT NULL,
  status VARCHAR(765) NOT NULL,
  trans_id VARCHAR(765) DEFAULT NULL,
- failure_description text,
+ failure_description VARCHAR(300),
  failure_code VARCHAR(765) DEFAULT NULL,
- failure_message text,
+ failure_message VARCHAR(300),
  currency VARCHAR(15) NOT NULL DEFAULT 'USD',
 PRIMARY KEY(id),
 FOREIGN KEY(order_id) REFERENCES core_order(id)
