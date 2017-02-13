@@ -74,7 +74,7 @@ CREATE TABLE ak_sumofus.core_userfield(
   FOREIGN KEY(parent_id) REFERENCES core_user(id)
 )
 DISTKEY(parent_id)
-COMPOUND SORTKEY(name, value, parent_id);
+COMPOUND SORTKEY(name, value, parent_id, id);
 
 
 CREATE TABLE ak_sumofus.core_location(
@@ -163,7 +163,7 @@ CREATE TABLE ak_sumofus.core_actionfield(
   FOREIGN KEY(parent_id) REFERENCES core_action(id)
 )
 DISTKEY(parent_id)
-COMPOUND SORTKEY(name,value, id);
+COMPOUND SORTKEY(name, value, id);
 
 
 CREATE TABLE ak_sumofus.core_usermailing(
@@ -177,7 +177,7 @@ CREATE TABLE ak_sumofus.core_usermailing(
   FOREIGN KEY (user_id) REFERENCES core_user(id)
 )
 DISTKEY(user_id)
-INTERLEAVED SORTKEY(user_id,mailing_id,created_at);
+INTERLEAVED SORTKEY(user_id,mailing_id,created_at, id);
 
 
 CREATE TABLE ak_sumofus.core_clickurl (
