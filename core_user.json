@@ -1,0 +1,62 @@
+{
+  "rules": [
+          {
+      "rule-type": "selection",
+      "rule-id": "1",
+      "rule-name": "1",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_user"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "27",
+      "rule-name": "27",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_user",
+        "column-name": "prefix"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "28",
+      "rule-name": "28",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_user",
+        "column-name": "suffix"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "29",
+      "rule-name": "29",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_user",
+        "column-name": "password"
+      },
+      "rule-action": "remove-column"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "30",
+      "rule-name": "30",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_user",
+        "column-name": "plus4"
+      },
+      "rule-action": "remove-column"
+    }
+  ]
+}
