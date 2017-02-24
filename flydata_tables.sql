@@ -362,10 +362,11 @@ CREATE TABLE ak_sumofus.new_core_actionfield(
 DISTKEY(parent_id)
 COMPOUND SORTKEY(name, value, id);
 
-INSERT INTO new_core_actionfield (SELECT * FROM core_actionfield);
-
 ALTER TABLE core_actionfield RENAME TO old_core_actionfield;
+
+INSERT INTO new_core_actionfield (SELECT * FROM old_core_actionfield);
 ALTER TABLE new_core_actionfield RENAME TO core_actionfield;
+
 
 -- ak_sumofus  core_actionfield  id  integer delta true  1 true
 -- ak_sumofus  core_actionfield  parent_id integer delta false 0 false
@@ -384,9 +385,8 @@ CREATE TABLE ak_sumofus.new_core_clickurl (
 DISTKEY(id)
 INTERLEAVED SORTKEY(id,page_id,url);
 
-INSERT INTO new_core_clickurl (SELECT * FROM core_clickurl);
-
 ALTER TABLE core_clickurl RENAME TO old_core_clickurl;
+INSERT INTO new_core_clickurl (SELECT * FROM old_core_clickurl);
 ALTER TABLE new_core_clickurl RENAME TO core_clickurl;
 
 -- ak_sumofus  core_clickurl id  integer delta true  1 true
@@ -415,10 +415,13 @@ CREATE TABLE ak_sumofus.new_core_useragent(
 DISTKEY(id)
 INTERLEAVED SORTKEY(is_mobile,is_phone,is_tablet,is_desktop,browser,device);
 
-INSERT INTO new_core_useragent (SELECT * FROM core_useragent);
-
 ALTER TABLE core_useragent RENAME TO old_core_useragent;
+
+INSERT INTO new_core_useragent (SELECT * FROM old_core_useragent);
+
 ALTER TABLE new_core_uesragent RENAME TO core_useragent;
+
+
 
 -- ak_sumofus  core_useragent  id  integer delta true  1 true
 -- ak_sumofus  core_useragent  created_at  timestamp without time zone lzo false 0 false
@@ -454,10 +457,13 @@ CREATE TABLE ak_sumofus.new_core_click (
 DISTKEY(user_id)
 INTERLEAVED SORTKEY(clickurl_id, user_id, mailing_id);
 
-INSERT INTO new_core_click (SELECT * FROM core_click);
-
 ALTER TABLE core_click RENAME TO old_core_click;
+
+INSERT INTO new_core_click (SELECT * FROM old_core_click);
+
 ALTER TABLE new_core_click RENAME TO core_click;
+
+
 
 -- ak_sumofus  core_click  id  bigint  delta true  1 true
 -- ak_sumofus  core_click  clickurl_id integer lzo false 0 false
@@ -484,10 +490,14 @@ CREATE TABLE ak_sumofus.new_core_open(
 DISTKEY(user_id)
 INTERLEAVED SORTKEY(user_id, mailing_id);
 
-INSERT INTO new_core_open (SELECT * FROM core_open);
 
 ALTER TABLE core_open RENAME TO old_core_open;
+
+INSERT INTO new_core_open (SELECT * FROM old_core_open);
+
 ALTER TABLE new_core_open RENAME TO core_open;
+
+
 
 -- ak_sumofus  core_open id  bigint  delta true  1 true
 -- ak_sumofus  core_open user_id integer lzo false 0 false
@@ -507,10 +517,13 @@ PRIMARY KEY(id)
 DISTKEY(id)
 SORTKEY(id);
 
-INSERT INTO new_share_type (SELECT * FROM share_type);
-
 ALTER TABLE share_type RENAME TO old_share_type;
+
+INSERT INTO new_share_type (SELECT * FROM old_share_type);
+
 ALTER TABLE new_share_type RENAME TO share_type;
+
+
 
 -- ak_sumofus  share_type  id  integer none  true  1 true
 -- ak_sumofus  share_type  created_at  timestamp without time zone none  false 0 false
@@ -539,10 +552,13 @@ FOREIGN KEY(user_id) REFERENCES core_user(id)
 DISTKEY(user_id)
 INTERLEAVED SORTKEY(action_id,created_at, page_id, user_id,referring_share_id ); 
 
-INSERT INTO new_share_link (SELECT * FROM share_link);
-
 ALTER TABLE share_link RENAME TO old_share_link;
+
+INSERT INTO new_share_link (SELECT * FROM old_share_link);
+
 ALTER TABLE new_share_link RENAME TO share_link;
+
+
 
 -- ak_sumofus  share_link  id  integer delta true  1 true
 -- ak_sumofus  share_link  created_at  timestamp without time zone lzo false 0 false
@@ -570,10 +586,14 @@ FOREIGN KEY(share_id) REFERENCES share_link(id)
 DISTKEY(action_id)
 INTERLEAVED SORTKEY(id,action_id, share_id,created_at);
 
-INSERT INTO new_share_action (SELECT * FROM share_action);
 
 ALTER TABLE share_action RENAME TO old_share_action;
+
+INSERT INTO new_share_action (SELECT * FROM old_share_action);
+
 ALTER TABLE new_share_action RENAME TO share_action;
+
+
 
 -- ak_sumofus  share_action  id  integer delta true  1 true
 -- ak_sumofus  share_action  created_at  timestamp without time zone lzo false 0 false
@@ -595,10 +615,13 @@ FOREIGN KEY(share_id) REFERENCES share_link(id)
 DISTKEY(share_id)
 INTERLEAVED SORTKEY(id,share_id,page_id, created_at);
 
-INSERT INTO new_share_click (SELECT * FROM share_click);
-
 ALTER TABLE share_click RENAME TO old_share_click;
+
+INSERT INTO new_share_click (SELECT * FROM old_share_click);
+
 ALTER TABLE new_share_click RENAME TO share_click;
+
+
 
 -- ak_sumofus  share_click id  integer delta true  1 true
 -- ak_sumofus  share_click created_at  timestamp without time zone lzo false 0 false
@@ -629,10 +652,13 @@ CREATE TABLE ak_sumofus.new_core_order (
 DISTKEY(id)
 SORTKEY(id,action_id, user_id, total_converted, status, account);
 
-INSERT INTO new_core_order (SELECT * FROM core_order);
-
 ALTER TABLE core_order RENAME TO old_core_order;
+
+INSERT INTO new_core_order (SELECT * FROM old_core_order);
+
 ALTER TABLE new_core_order RENAME TO core_order;
+
+
 
 -- ak_sumofus  core_order  id  integer delta true  1 true
 -- ak_sumofus  core_order  created_at  timestamp without time zone lzo false 0 false
@@ -674,10 +700,13 @@ FOREIGN KEY(order_id) REFERENCES core_order(id)
 DISTKEY(order_id)
 INTERLEAVED SORTKEY(id,created_at, order_id, type,account, amount_converted,status);
 
-INSERT INTO new_core_transaction (SELECT * FROM core_transaction);
-
 ALTER TABLE core_transaction RENAME TO old_core_transaction;
+
+INSERT INTO new_core_transaction (SELECT * FROM old_core_transaction);
+
 ALTER TABLE new_core_transaction RENAME TO core_transaction;
+
+
 
 -- ak_sumofus  core_transaction  id  integer delta true  1 true
 -- ak_sumofus  core_transaction  created_at  timestamp without time zone lzo false 0 false
@@ -724,9 +753,10 @@ FOREIGN KEY(user_id) REFERENCES core_user(id)
 DISTKEY(order_id)
 INTERLEAVED SORTKEY(id,order_id, action_id, user_id, created_at, amount_converted, status, account);
 
-INSERT INTO new_core_orderrecurring (SELECT * FROM core_orderrecurring);
-
 ALTER TABLE core_orderrecurring RENAME TO old_core_orderrecurring;
+
+INSERT INTO new_core_orderrecurring (SELECT * FROM old_core_orderrecurring);
+
 ALTER TABLE new_core_orderrecurring RENAME TO core_orderrecurring;
 
 -- ak_sumofus  core_orderrecurring id  integer delta true  1 true
@@ -761,10 +791,12 @@ UNIQUE(name)
 DISTKEY(id)
 INTERLEAVED SORTKEY(id,name);
 
-INSERT INTO new_core_tag (SELECT * FROM core_tag);
-
 ALTER TABLE core_tag RENAME TO old_core_tag;
+
+INSERT INTO new_core_tag (SELECT * FROM old_core_tag);
+
 ALTER TABLE new_core_tag RENAME TO core_tag;
+
 
 -- ak_sumofus  core_tag  id  integer none  true  1 true
 -- ak_sumofus  core_tag  created_at  timestamp without time zone none  false 0 false
@@ -786,10 +818,14 @@ FOREIGN KEY(tag_id) REFERENCES core_tag(id)
 DISTKEY(mailing_id)
 INTERLEAVED SORTKEY(id, mailing_id, tag_id);
 
-INSERT INTO new_core_mailing_tags (SELECT * FROM core_mailing_tags);
-
 ALTER TABLE core_mailing_tags RENAME TO old_core_mailing_tags;
+
+INSERT INTO new_core_mailing_tags (SELECT * FROM old_core_mailing_tags);
+
 ALTER TABLE new_core_mailing_tags RENAME TO core_mailing_tags;
+
+
+
 
 -- ak_sumofus  core_mailing_tags id  integer delta true  1 true
 -- ak_sumofus  core_mailing_tags mailing_id  integer delta false 0 false
@@ -806,9 +842,10 @@ FOREIGN KEY(tag_id) REFERENCES core_tag(id)
 DISTKEY(page_id)
 INTERLEAVED SORTKEY(id, page_id, tag_id);
 
-INSERT INTO new_core_page_tags (SELECT * FROM core_page_tags);
-
 ALTER TABLE core_page_tags RENAME TO old_core_page_tags;
+
+INSERT INTO new_core_page_tags (SELECT * FROM old_core_page_tags);
+
 ALTER TABLE new_core_page_tags RENAME TO core_page_tags;
 
 -- ak_sumofus  core_page_tags  id  integer delta true  1 true
@@ -832,10 +869,12 @@ FOREIGN KEY(user_id) REFERENCES core_user(id)
 DISTKEY(user_id)
 INTERLEAVED SORTKEY(id, user_id, created_at, list_id, change_id,action_id);
 
-INSERT INTO new_core_subscriptionhistory (SELECT * FROM core_subscriptionhistory);
-
 ALTER TABLE core_subscriptionhistory RENAME TO old_core_subscriptionhistory;
+
+INSERT INTO new_core_subscriptionhistory (SELECT * FROM old_core_subscriptionhistory);
+
 ALTER TABLE new_core_subscriptionhistory RENAME TO core_subscriptionhistory;
+
 
 -- ak_sumofus  core_subscriptionhistory  id  integer delta true  1 true
 -- ak_sumofus  core_subscriptionhistory  created_at  timestamp without time zone lzo false 0 false
@@ -859,10 +898,12 @@ CREATE TABLE ak_sumofus.new_core_subscription (
 DISTKEY(user_id)
 INTERLEAVED SORTKEY(id, user_id, list_id, created_at);
 
-INSERT INTO new_core_subscription (SELECT * FROM core_subscription);
-
 ALTER TABLE core_subscription RENAME TO old_core_subscription;
+
+INSERT INTO new_core_subscription (SELECT * FROM old_core_subscription);
+
 ALTER TABLE new_core_subscription RENAME TO core_subscription;
+
 
 -- ak_sumofus  core_subscription id  integer delta true  1 true
 -- ak_sumofus  core_subscription created_at  timestamp without time zone lzo false 0 false
@@ -886,9 +927,10 @@ FOREIGN KEY(user_id) REFERENCES core_user(id)
 DISTKEY(user_id)
 INTERLEAVED SORTKEY(id,user_id);
 
-INSERT INTO new_core_phone (SELECT * FROM core_phone);
-
 ALTER TABLE core_phone RENAME TO old_core_phone;
+
+INSERT INTO new_core_phone (SELECT * FROM old_core_phone);
+
 ALTER TABLE new_core_phone RENAME TO core_phone;
 
 -- ak_sumofus  core_phone  id  integer delta true  1 true
@@ -910,3 +952,21 @@ DROP TABLE old_core_userfield;
 DROP TABLE old_core_location;
 DROP TABLE old_core_mailing;
 DROP TABLE old_core_action;
+DROP TABLE old_core_actionfield;
+DROP TABLE old_core_clickurl;
+DROP TABLE old_core_useragent;
+DROP TABLE old_core_click;
+DROP TABLE old_core_open;
+DROP TABLE old_share_type;
+DROP TABLE old_share_link;
+DROP TABLE old_share_action;
+DROP TABLE old_share_click;
+DROP TABLE old_core_order;
+DROP TABLE old_core_transaction;
+DROP TABLE old_core_orderrecurring;
+DROP TABLE old_core_tag;
+DROP TABLE old_core_mailing_tags;
+DROP TABLE old_core_page_tags;
+DROP TABLE old_core_subscriptionhistory;
+DROP TABLE old_core_subscription;
+DROP TABLE old_core_phone;
