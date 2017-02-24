@@ -349,7 +349,6 @@ INSERT INTO new_core_action (SELECT * FROM core_action);
 ALTER TABLE core_action RENAME TO old_core_action;
 ALTER TABLE new_core_action RENAME TO core_action;
 
-####################
 
 CREATE TABLE ak_sumofus.new_core_actionfield(
   id INTEGER NOT NULL,
@@ -373,6 +372,8 @@ ALTER TABLE new_core_actionfield RENAME TO core_actionfield;
 -- ak_sumofus  core_actionfield  name  character varying(765)  lzo false 0 false
 -- ak_sumofus  core_actionfield  value character varying(65535)  lzo false 0 false
 
+
+
 CREATE TABLE ak_sumofus.new_core_clickurl (
   id INTEGER NOT NULL,
   url VARCHAR(765) NOT NULL,
@@ -393,6 +394,7 @@ ALTER TABLE new_core_clickurl RENAME TO core_clickurl;
 -- ak_sumofus  core_clickurl url character varying(765)  lzo false 0 false
 -- ak_sumofus  core_clickurl page_id integer delta false 0 false
 -- ak_sumofus  core_clickurl created_at  timestamp without time zone lzo false 0 false
+
 
 CREATE TABLE ak_sumofus.new_core_useragent(
   id INTEGER NOT NULL,
@@ -419,9 +421,7 @@ ALTER TABLE core_useragent RENAME TO old_core_useragent;
 
 INSERT INTO new_core_useragent (SELECT * FROM old_core_useragent);
 
-ALTER TABLE new_core_uesragent RENAME TO core_useragent;
-
-
+ALTER TABLE new_core_useragent RENAME TO core_useragent;
 
 -- ak_sumofus  core_useragent  id  integer delta true  1 true
 -- ak_sumofus  core_useragent  created_at  timestamp without time zone lzo false 0 false
@@ -437,6 +437,7 @@ ALTER TABLE new_core_uesragent RENAME TO core_useragent;
 -- ak_sumofus  core_useragent  is_phone  smallint  lzo false 0 false
 -- ak_sumofus  core_useragent  is_tablet smallint  lzo false 0 false
 -- ak_sumofus  core_useragent  is_desktop  smallint  lzo false 0 false
+
 
 CREATE TABLE ak_sumofus.new_core_click (
   id BIGINT NOT NULL,
@@ -462,7 +463,6 @@ ALTER TABLE core_click RENAME TO old_core_click;
 INSERT INTO new_core_click (SELECT * FROM old_core_click);
 
 ALTER TABLE new_core_click RENAME TO core_click;
-
 
 
 -- ak_sumofus  core_click  id  bigint  delta true  1 true
@@ -496,7 +496,6 @@ ALTER TABLE core_open RENAME TO old_core_open;
 INSERT INTO new_core_open (SELECT * FROM old_core_open);
 
 ALTER TABLE new_core_open RENAME TO core_open;
-
 
 
 -- ak_sumofus  core_open id  bigint  delta true  1 true
@@ -559,7 +558,6 @@ INSERT INTO new_share_link (SELECT * FROM old_share_link);
 ALTER TABLE new_share_link RENAME TO share_link;
 
 
-
 -- ak_sumofus  share_link  id  integer delta true  1 true
 -- ak_sumofus  share_link  created_at  timestamp without time zone lzo false 0 false
 -- ak_sumofus  share_link  updated_at  timestamp without time zone lzo false 0 false
@@ -593,8 +591,6 @@ INSERT INTO new_share_action (SELECT * FROM old_share_action);
 
 ALTER TABLE new_share_action RENAME TO share_action;
 
-
-
 -- ak_sumofus  share_action  id  integer delta true  1 true
 -- ak_sumofus  share_action  created_at  timestamp without time zone lzo false 0 false
 -- ak_sumofus  share_action  updated_at  timestamp without time zone lzo false 0 false
@@ -621,13 +617,12 @@ INSERT INTO new_share_click (SELECT * FROM old_share_click);
 
 ALTER TABLE new_share_click RENAME TO share_click;
 
-
-
 -- ak_sumofus  share_click id  integer delta true  1 true
 -- ak_sumofus  share_click created_at  timestamp without time zone lzo false 0 false
 -- ak_sumofus  share_click updated_at  timestamp without time zone lzo false 0 false
 -- ak_sumofus  share_click share_id  integer delta32k  false 0 false
 -- ak_sumofus  share_click page_id integer lzo false 0 false
+
 
 CREATE TABLE ak_sumofus.new_core_order (
   id INTEGER NOT NULL,
@@ -635,6 +630,7 @@ CREATE TABLE ak_sumofus.new_core_order (
   updated_at TIMESTAMP NOT NULL,
   action_id INTEGER NOT NULL,
   user_id INTEGER NOT NULL,
+  user_detail_id INTEGER,
   card_num_last_four VARCHAR(12) NOT NULL,
   shipping_address_id INTEGER,
   total NUMERIC(10,2) NOT NULL,
@@ -825,8 +821,6 @@ INSERT INTO new_core_mailing_tags (SELECT * FROM old_core_mailing_tags);
 ALTER TABLE new_core_mailing_tags RENAME TO core_mailing_tags;
 
 
-
-
 -- ak_sumofus  core_mailing_tags id  integer delta true  1 true
 -- ak_sumofus  core_mailing_tags mailing_id  integer delta false 0 false
 -- ak_sumofus  core_mailing_tags tag_id  integer lzo false 0 false
@@ -883,6 +877,7 @@ ALTER TABLE new_core_subscriptionhistory RENAME TO core_subscriptionhistory;
 -- ak_sumofus  core_subscriptionhistory  list_id integer lzo false 0 false
 -- ak_sumofus  core_subscriptionhistory  change_id integer lzo false 0 false
 -- ak_sumofus  core_subscriptionhistory  action_id integer delta false 0 false
+
 
 
 CREATE TABLE ak_sumofus.new_core_subscription (
@@ -942,6 +937,7 @@ ALTER TABLE new_core_phone RENAME TO core_phone;
 -- ak_sumofus  core_phone  source  character varying(75) lzo false 0 false
 -- ak_sumofus  core_phone  normalized_phone  character varying(75) lzo false 0 false
 
+####################
 
 
 # DROP RENAMED OLD TABLES
