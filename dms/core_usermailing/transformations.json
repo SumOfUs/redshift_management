@@ -1,0 +1,14 @@
+{
+  "rules": [
+    {
+      "rule-type": "selection",
+      "rule-id": "2",
+      "rule-name": "2",
+      "object-locator": {
+        "schema-name": "ak_sumofus",
+        "table-name": "core_usermailing"
+      },
+      "rule-action": "include"
+    }
+  ]
+}
