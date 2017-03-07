@@ -47,15 +47,17 @@ If you're modifying a table that is synced by DMS, stop the replication task fir
 ### FlyData
 
 FlyData-related table modification statements are in the `flydata_tables.sql` files in the `/flydata` folder. Statements to modify the tables should follow this pattern:
+
 1. Rename the table you want to modify from `tablename` to `old_tablename`.
 2. Create a new table called `new_tablename`
-- with the expected data types and widths for the columns
-- with unique and not null constraints
-- add primary and foreign keys (for the query optimizer)
-- add distribution and sortkeys
+  - with the expected data types and widths for the columns
+  - with unique and not null constraints
+  - add primary and foreign keys (for the query optimizer)
+  - add distribution and sortkeys
 3. Select all data from `tablename` and insert it into `new_tablename`
 4. Rename `new_tablename` to `tablename`
 5. Drop `old_tablename`. 
+
 There are very few modifications you can perform on existing tables on Redshift - if you want to make modification, you'll need to make a new one with the desired schema and insert the existing data. The files with the create table statements should be helpful to you in this case, but if you need to modify tables, please update the files or create new files with the modifications you have made so it's easier to keep count. 
 
 If you're modifying tables synced with FlyData, you can follow this pattern without stopping sync, and the changes that temporarily don't get inserted into `old_tablename` because of the rename step will be buffered and added afterwards. 
